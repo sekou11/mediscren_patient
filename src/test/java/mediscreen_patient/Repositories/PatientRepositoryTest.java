@@ -2,9 +2,9 @@ package mediscreen_patient.Repositories;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Optional;
 
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -16,10 +16,10 @@ class PatientRepositoryTest {
 	@Autowired
 	PatientRepository patientRepository;
 	
-	  @BeforeEach
-      void testwitdeleteAllPatients() {
-    	  patientRepository.deleteAll();
-      }
+//	  @BeforeEach
+//      void testwitdeleteAllPatients() {
+//    	  patientRepository.deleteAll();
+//      }
 	  
 	@Test
 	public void PatientTest(){
