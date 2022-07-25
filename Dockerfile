@@ -1,11 +1,3 @@
 FROM openjdk:8-jdk-alpine
-VOLUME /tmp
-
-EXPOSE 8701
-
-ARG JAR_FILE=target/patient-0.0.1-SNAPSHOT.jar
-
-COPY ${JAR_FILE} app.jar
-
-
-ENTRYPOINT ["java","-jar","/app.jar"]
+COPY target/*.jar mediscren_patient-0.0.1-SNAPSHOT.jar
+ENTRYPOINT ["java","-jar","-Dspring.profiles.active=docker","/mediscren_patient-0.0.1-SNAPSHOT.jar"]
